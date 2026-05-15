@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Feedback Overview | Gram Vikas</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#ebe7ec",
+                        "inverse-on-surface": "#f4eff5",
+                        "secondary-container": "#a0f399",
+                        "primary-container": "#0056d2",
+                        "on-surface": "#1c1b1f",
+                        "on-secondary": "#ffffff",
+                        "background": "#fdf8fd",
+                        "surface-container-highest": "#e5e1e7",
+                        "surface-container-low": "#f7f2f8",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#0056d2",
+                        "tertiary-fixed-dim": "#ffb598",
+                        "outline-variant": "#c3c6d6",
+                        "on-secondary-fixed-variant": "#005312",
+                        "tertiary-fixed": "#ffdbce",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed": "#001847",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed": "#002204",
+                        "on-background": "#1c1b1f",
+                        "inverse-primary": "#b2c5ff",
+                        "surface-dim": "#ddd9de",
+                        "surface": "#fdf8fd",
+                        "on-surface-variant": "#424654",
+                        "primary": "#0040a1",
+                        "on-secondary-container": "#217128",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#a3f69c",
+                        "tertiary": "#70371e",
+                        "inverse-surface": "#313034",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#ccd8ff",
+                        "secondary-fixed-dim": "#88d982",
+                        "on-tertiary-fixed-variant": "#70371e",
+                        "surface-variant": "#e5e1e7",
+                        "outline": "#737785",
+                        "on-primary-fixed-variant": "#0040a1",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#f1ecf2",
+                        "on-tertiary-container": "#ffcfbc",
+                        "secondary": "#1b6d24",
+                        "surface-bright": "#fdf8fd",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#8d4e33",
+                        "primary-fixed-dim": "#b2c5ff",
+                        "primary-fixed": "#dae2ff",
+                        "on-tertiary-fixed": "#370e00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "touch-target-min": "48px",
+                        "margin-mobile": "24px",
+                        "base": "8px",
+                        "stack-md": "24px",
+                        "gutter": "16px",
+                        "stack-lg": "40px",
+                        "stack-sm": "12px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Public Sans"],
+                        "title-lg": ["Public Sans"],
+                        "body-lg": ["Public Sans"],
+                        "headline-lg": ["Public Sans"],
+                        "display-lg": ["Public Sans"],
+                        "body-md": ["Public Sans"],
+                        "label-lg": ["Public Sans"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                        "title-lg": ["22px", {"lineHeight": "28px", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "26px", "letterSpacing": "0.5px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "display-lg": ["57px", {"lineHeight": "64px", "letterSpacing": "-0.25px", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0.25px", "fontWeight": "400"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen pb-24">
+<!-- TopAppBar Section -->
+<header class="fixed top-0 w-full z-50 bg-surface dark:bg-inverse-surface border-b border-outline-variant dark:border-outline flex items-center justify-between px-margin-mobile h-16">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary dark:text-inverse-primary" data-icon="account_balance">account_balance</span>
+<h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-inverse-primary">Gram Vikas</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-high transition-colors duration-200">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="search">search</span>
+</button>
+<span class="material-symbols-outlined text-primary dark:text-inverse-primary" data-icon="account_circle">account_circle</span>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-24 px-margin-mobile max-w-4xl mx-auto">
+<!-- Screen Header -->
+<div class="mb-stack-md flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Citizen Feedback</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Reviewing village sentiment for active projects</p>
+</div>
+<div class="flex items-center gap-stack-sm overflow-x-auto scrollbar-hide">
+<span class="bg-secondary-container text-on-secondary-container px-4 py-1 rounded-full font-label-lg text-label-lg whitespace-nowrap">Latest</span>
+<span class="bg-surface-container-high text-on-surface-variant px-4 py-1 rounded-full font-label-lg text-label-lg whitespace-nowrap">High Rated</span>
+<span class="bg-surface-container-high text-on-surface-variant px-4 py-1 rounded-full font-label-lg text-label-lg whitespace-nowrap">Needs Review</span>
+</div>
+</div>
+<!-- Feedback Entries List -->
+<div class="space-y-stack-md">
+<!-- Entry 1 -->
+<div class="bg-surface border border-outline-variant rounded-xl p-stack-md transition-shadow hover:shadow-sm">
+<div class="flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-fixed" data-icon="person">person</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface">Rajesh Kumar</h3>
+<p class="font-label-lg text-label-lg text-outline">ID: GV-8821 • Oct 24, 2023</p>
+</div>
+</div>
+<div class="flex text-primary">
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-4 rounded-lg">
+<button class="font-label-lg text-label-lg text-primary mb-1 block hover:underline">Village Road Expansion - Zone 4</button>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed italic">"The new concrete path has significantly improved our commute during the monsoons. The local crew was very professional and finished ahead of schedule."</p>
+</div>
+<div class="flex justify-end items-center gap-2">
+<button class="text-on-surface-variant flex items-center gap-1 font-label-lg px-3 py-1 rounded-full hover:bg-surface-container-highest">
+<span class="material-symbols-outlined text-sm" data-icon="reply">reply</span>
+                            Reply
+                        </button>
+<button class="text-on-surface-variant flex items-center gap-1 font-label-lg px-3 py-1 rounded-full hover:bg-surface-container-highest">
+<span class="material-symbols-outlined text-sm" data-icon="flag">flag</span>
+                            Flag
+                        </button>
+</div>
+</div>
+</div>
+<!-- Entry 2 -->
+<div class="bg-surface border border-outline-variant rounded-xl p-stack-md transition-shadow hover:shadow-sm">
+<div class="flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-on-tertiary-fixed" data-icon="account_circle">account_circle</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface">Sunita Devi</h3>
+<p class="font-label-lg text-label-lg text-outline">ID: GV-4412 • Oct 22, 2023</p>
+</div>
+</div>
+<div class="flex text-primary">
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 0;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 0;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 0;">star</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-4 rounded-lg">
+<button class="font-label-lg text-label-lg text-primary mb-1 block hover:underline">Community Well Renovation</button>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">"The water supply is better, but there is still some debris left around the construction site. It's difficult for elders to walk through the muddy area."</p>
+</div>
+<div class="flex justify-end items-center gap-2">
+<div class="mr-auto">
+<span class="bg-error-container text-on-error-container px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="report_problem">report_problem</span>
+                                High Priority
+                            </span>
+</div>
+<button class="text-on-surface-variant flex items-center gap-1 font-label-lg px-3 py-1 rounded-full hover:bg-surface-container-highest">
+<span class="material-symbols-outlined text-sm" data-icon="reply">reply</span>
+                            Reply
+                        </button>
+</div>
+</div>
+</div>
+<!-- Entry 3 -->
+<div class="bg-surface border border-outline-variant rounded-xl p-stack-md transition-shadow hover:shadow-sm">
+<div class="flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-fixed" data-icon="sentiment_satisfied">sentiment_satisfied</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface">Amit Singh</h3>
+<p class="font-label-lg text-label-lg text-outline">ID: GV-9005 • Oct 20, 2023</p>
+</div>
+</div>
+<div class="flex text-primary">
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 0;">star</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-4 rounded-lg">
+<button class="font-label-lg text-label-lg text-primary mb-1 block hover:underline">Solar Street Lights Installation</button>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed italic">"Our street is finally bright at night. This makes me feel much safer coming home late from the fields. Thank you for this initiative."</p>
+</div>
+<div class="flex justify-end items-center gap-2">
+<button class="text-on-surface-variant flex items-center gap-1 font-label-lg px-3 py-1 rounded-full hover:bg-surface-container-highest">
+<span class="material-symbols-outlined text-sm" data-icon="reply">reply</span>
+                            Reply
+                        </button>
+<button class="text-on-surface-variant flex items-center gap-1 font-label-lg px-3 py-1 rounded-full hover:bg-surface-container-highest">
+<span class="material-symbols-outlined text-sm" data-icon="share">share</span>
+                            Share
+                        </button>
+</div>
+</div>
+</div>
+<!-- Promotion / Stats Card -->
+<div class="relative overflow-hidden bg-primary-container text-on-primary-container rounded-2xl p-stack-lg flex flex-col md:flex-row items-center gap-gutter shadow-xl">
+<div class="flex-1 space-y-4">
+<h4 class="font-headline-md text-headline-md leading-tight">Sentiment Analysis Report Available</h4>
+<p class="font-body-md text-body-md opacity-90">View monthly aggregated village happiness scores and key areas requiring governance intervention.</p>
+<button class="bg-surface text-primary font-label-lg py-3 px-8 rounded-full flex items-center gap-2 hover:bg-surface-container-low transition-colors">
+                        Generate Report
+                        <span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+</button>
+</div>
+<div class="w-full md:w-1/3 h-48 md:h-auto overflow-hidden rounded-xl">
+<img alt="Grama-Suvidha Logo" class="w-full h-full object-cover" data-alt="A clean, minimalist brand logo for a rural digital platform. The logo features a stylized cottage under a bright rising sun and a small green plant sprout, symbolizing growth and housing. It is set against a pure white background with a soft ambient glow, using a corporate color palette of deep sapphire blue and earthy emerald green. The style is modern, professional, and accessible." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnphvR1Ji0TUUi-eu_S9_PaONcgd4i6HmggD1kf42g14t10AgTnDt1Ylz92tumxjH2FiAWecozy1Sz5GrbjGMEHAhCZUwc_JjDVyE8w9reO9BRoId0b8ZYLbKwhZxN4WP7HE8s3LtNemxynCOdG4Yi787NLOtl6JddBRyKMfYe9Ggbr6Wsbv2befRyHRGpFnmxYszmHXEmLQtJCzlpsiMoPNa_b-ix096ys9OOhhAkmKswbbDuXD_vuIkE7hVotVxFBnIp8jUpgL0"/>
+</div>
+</div>
+</div>
+<!-- Pagination / Load More -->
+<div class="py-stack-lg flex justify-center">
+<button class="flex items-center gap-2 border border-outline text-on-surface font-label-lg py-2 px-6 rounded-full hover:bg-surface-container">
+                Load More Entries
+                <span class="material-symbols-outlined" data-icon="expand_more">expand_more</span>
+</button>
+</div>
+</main>
+<!-- BottomNavBar Section -->
+<nav class="fixed bottom-0 w-full z-50 bg-surface-container dark:bg-surface-container-low rounded-t-xl shadow-md flex justify-around items-center h-touch-target-min pb-2">
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-5 py-1 hover:bg-surface-container-highest transition-transform duration-150 scale-95 active:scale-90">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-lg text-label-lg">Dashboard</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-5 py-1 hover:bg-surface-container-highest transition-transform duration-150 scale-95 active:scale-90">
+<span class="material-symbols-outlined" data-icon="account_tree">account_tree</span>
+<span class="font-label-lg text-label-lg">Projects</span>
+</button>
+<!-- Issues Active State -->
+<button class="flex flex-col items-center justify-center bg-secondary-container dark:bg-on-secondary-fixed-variant text-on-secondary-container dark:text-secondary-fixed rounded-full px-5 py-1 transition-transform duration-150 scale-95 active:scale-90">
+<span class="material-symbols-outlined" data-icon="report_problem">report_problem</span>
+<span class="font-label-lg text-label-lg">Issues</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-5 py-1 hover:bg-surface-container-highest transition-transform duration-150 scale-95 active:scale-90">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-lg text-label-lg">Settings</span>
+</button>
+</nav>
+</body></html>

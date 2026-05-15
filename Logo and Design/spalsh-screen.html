@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Grama-Suvidha Splash Screen</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#ebe7ec",
+                        "inverse-on-surface": "#f4eff5",
+                        "secondary-container": "#a0f399",
+                        "primary-container": "#0056d2",
+                        "on-surface": "#1c1b1f",
+                        "on-secondary": "#ffffff",
+                        "background": "#fdf8fd",
+                        "surface-container-highest": "#e5e1e7",
+                        "surface-container-low": "#f7f2f8",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#0056d2",
+                        "tertiary-fixed-dim": "#ffb598",
+                        "outline-variant": "#c3c6d6",
+                        "on-secondary-fixed-variant": "#005312",
+                        "tertiary-fixed": "#ffdbce",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed": "#001847",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed": "#002204",
+                        "on-background": "#1c1b1f",
+                        "inverse-primary": "#b2c5ff",
+                        "surface-dim": "#ddd9de",
+                        "surface": "#fdf8fd",
+                        "on-surface-variant": "#424654",
+                        "primary": "#0040a1",
+                        "on-secondary-container": "#217128",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#a3f69c",
+                        "tertiary": "#70371e",
+                        "inverse-surface": "#313034",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#ccd8ff",
+                        "secondary-fixed-dim": "#88d982",
+                        "on-tertiary-fixed-variant": "#70371e",
+                        "surface-variant": "#e5e1e7",
+                        "outline": "#737785",
+                        "on-primary-fixed-variant": "#0040a1",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#f1ecf2",
+                        "on-tertiary-container": "#ffcfbc",
+                        "secondary": "#1b6d24",
+                        "surface-bright": "#fdf8fd",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#8d4e33",
+                        "primary-fixed-dim": "#b2c5ff",
+                        "primary-fixed": "#dae2ff",
+                        "on-tertiary-fixed": "#370e00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "touch-target-min": "48px",
+                        "margin-mobile": "24px",
+                        "base": "8px",
+                        "stack-md": "24px",
+                        "gutter": "16px",
+                        "stack-lg": "40px",
+                        "stack-sm": "12px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Public Sans"],
+                        "title-lg": ["Public Sans"],
+                        "body-lg": ["Public Sans"],
+                        "headline-lg": ["Public Sans"],
+                        "display-lg": ["Public Sans"],
+                        "body-md": ["Public Sans"],
+                        "label-lg": ["Public Sans"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                        "title-lg": ["22px", {"lineHeight": "28px", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "26px", "letterSpacing": "0.5px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "display-lg": ["57px", {"lineHeight": "64px", "letterSpacing": "-0.25px", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0.25px", "fontWeight": "400"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+        }
+        .splash-gradient {
+            background: linear-gradient(135deg, #a0f399 0%, #ffdbce 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen overflow-hidden">
+<!-- Splash Screen Container -->
+<!-- The navigation shell is suppressed for this splash screen as per the "The Destination Rule" and "Automatic Suppression" mandates for splash/onboarding screens. -->
+<main class="relative min-h-screen w-full flex flex-col items-center justify-center splash-gradient px-margin-mobile">
+<!-- Abstract Background Elements for Modern UI Depth -->
+<div class="absolute inset-0 opacity-20 pointer-events-none">
+<div class="absolute top-[-10%] left-[-10%] w-[400px] h-[400px] rounded-full bg-secondary opacity-30 blur-[100px]"></div>
+<div class="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] rounded-full bg-tertiary-container opacity-20 blur-[120px]"></div>
+</div>
+<!-- Central Branding Cluster -->
+<div class="z-10 flex flex-col items-center text-center">
+<!-- Logo Container -->
+<div class="mb-stack-lg relative">
+<div class="w-32 h-32 md:w-40 md:h-40 bg-surface-container-lowest rounded-[32px] shadow-sm flex items-center justify-center border border-outline-variant">
+<!-- Icon placeholder representing community and growth -->
+<span class="material-symbols-outlined text-[64px] md:text-[80px] text-secondary" style="font-variation-settings: 'FILL' 1;">
+                        agriculture
+                    </span>
+</div>
+<!-- Subtle reflection effect -->
+<div class="absolute -bottom-4 w-full h-8 bg-black/5 blur-xl rounded-full"></div>
+</div>
+<!-- App Identity -->
+<div class="space-y-base">
+<h1 class="font-display-lg text-display-lg text-on-secondary-fixed-variant tracking-tight">
+                    Grama-Suvidha
+                </h1>
+<p class="font-title-lg text-title-lg text-on-tertiary-fixed-variant/80 max-w-[280px] mx-auto leading-tight">
+                    Track Your Village Progress
+                </p>
+</div>
+</div>
+<!-- Footer Visual/Loading Indicator -->
+<div class="absolute bottom-stack-lg flex flex-col items-center gap-stack-sm">
+<!-- Progress Tracker: Large, linear progress bar in Growth Green as per Style Guidance -->
+<div class="w-48 h-2 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-1/3 rounded-full"></div>
+</div>
+<span class="font-label-lg text-label-lg text-outline uppercase tracking-widest">
+                Loading Data
+            </span>
+</div>
+<!-- Hero Decorative Image (Atmospheric background texture) -->
+<div class="absolute inset-0 z-0 opacity-10 mix-blend-overlay">
+<img alt="" class="w-full h-full object-cover" data-alt="A lush and serene rural landscape at sunrise, featuring rolling green hills and traditional village architecture bathed in warm, earthy golden hour light. The image captures a sense of growth and sustainability with vibrant green fields and clear morning skies, mirroring a modern corporate light-mode aesthetic with soft shadows and natural tones. The composition is clean and minimalist, emphasizing tranquility and village progress." src="https://lh3.googleusercontent.com/aida-public/AB6AXuASACsn8etJdS3ceJj1-QMb-UZaB1HtaVdgLS3Sqs7roclksFcWugq4GXTaYueRVoMaETNsU85en8ML9RAd89tMst1Z4Znmm4gMUx9rwDM1Fc4OSqxKOvS3I_NNVoS8Z_5it-jfsD0d9h2t3wYgYSKchDgXm9V2tkkXUWhs4op9wBX2pdH1F-eUH0_CO0MX5pZHD724unUQ9JCy4ilysJl1dPOj0DNP4j_z-hhEYBkEnF8B4fuGxIU3W1KcSfb9mgsJKi7afjB0iiQ"/>
+</div>
+</main>
+<!-- Illustrative Card Section (Hidden on small screens, shown as feature preview on larger) -->
+<div class="hidden md:flex fixed right-margin-mobile top-1/2 -translate-y-1/2 flex-col gap-gutter z-20">
+<!-- Feature Card 1 -->
+<div class="w-72 p-gutter bg-surface-container-lowest border border-outline-variant rounded-[24px] shadow-sm">
+<div class="flex items-center gap-base mb-base">
+<span class="material-symbols-outlined text-secondary">analytics</span>
+<span class="font-label-lg text-label-lg text-on-surface-variant">Infrastructure Status</span>
+</div>
+<div class="h-2 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-3/4"></div>
+</div>
+<p class="mt-base font-body-md text-body-md text-on-surface">Road Development: 75% Complete</p>
+</div>
+<!-- Feature Card 2 -->
+<div class="w-72 p-gutter bg-surface-container-lowest border border-outline-variant rounded-[24px] shadow-sm translate-x-margin-mobile">
+<div class="flex items-center gap-base mb-base">
+<span class="material-symbols-outlined text-primary">account_balance</span>
+<span class="font-label-lg text-label-lg text-on-surface-variant">Govt Schemes</span>
+</div>
+<p class="font-headline-md text-headline-md text-on-surface">12 Active</p>
+<p class="font-body-md text-body-md text-outline">Schemes currently in progress</p>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Settings - Gram Vikas</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#ebe7ec",
+                        "inverse-on-surface": "#f4eff5",
+                        "secondary-container": "#a0f399",
+                        "primary-container": "#0056d2",
+                        "on-surface": "#1c1b1f",
+                        "on-secondary": "#ffffff",
+                        "background": "#fdf8fd",
+                        "surface-container-highest": "#e5e1e7",
+                        "surface-container-low": "#f7f2f8",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#0056d2",
+                        "tertiary-fixed-dim": "#ffb598",
+                        "outline-variant": "#c3c6d6",
+                        "on-secondary-fixed-variant": "#005312",
+                        "tertiary-fixed": "#ffdbce",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed": "#001847",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed": "#002204",
+                        "on-background": "#1c1b1f",
+                        "inverse-primary": "#b2c5ff",
+                        "surface-dim": "#ddd9de",
+                        "surface": "#fdf8fd",
+                        "on-surface-variant": "#424654",
+                        "primary": "#0040a1",
+                        "on-secondary-container": "#217128",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#a3f69c",
+                        "tertiary": "#70371e",
+                        "inverse-surface": "#313034",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#ccd8ff",
+                        "secondary-fixed-dim": "#88d982",
+                        "on-tertiary-fixed-variant": "#70371e",
+                        "surface-variant": "#e5e1e7",
+                        "outline": "#737785",
+                        "on-primary-fixed-variant": "#0040a1",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#f1ecf2",
+                        "on-tertiary-container": "#ffcfbc",
+                        "secondary": "#1b6d24",
+                        "surface-bright": "#fdf8fd",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#8d4e33",
+                        "primary-fixed-dim": "#b2c5ff",
+                        "primary-fixed": "#dae2ff",
+                        "on-tertiary-fixed": "#370e00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "touch-target-min": "48px",
+                        "margin-mobile": "24px",
+                        "base": "8px",
+                        "stack-md": "24px",
+                        "gutter": "16px",
+                        "stack-lg": "40px",
+                        "stack-sm": "12px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Public Sans"],
+                        "title-lg": ["Public Sans"],
+                        "body-lg": ["Public Sans"],
+                        "headline-lg": ["Public Sans"],
+                        "display-lg": ["Public Sans"],
+                        "body-md": ["Public Sans"],
+                        "label-lg": ["Public Sans"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                        "title-lg": ["22px", {"lineHeight": "28px", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "26px", "letterSpacing": "0.5px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "display-lg": ["57px", {"lineHeight": "64px", "letterSpacing": "-0.25px", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0.25px", "fontWeight": "400"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+            background-color: #fdf8fd;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+        @media (max-width: 768px) {
+            .bento-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface border-b border-outline-variant flex items-center justify-between px-margin-mobile h-16 w-full">
+<div class="flex items-center gap-base">
+<span class="material-symbols-outlined text-primary" data-icon="account_balance">account_balance</span>
+<h1 class="font-headline-md text-headline-md font-bold text-primary">Gram Vikas</h1>
+</div>
+<div class="flex items-center gap-base">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-high transition-colors duration-200">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</header>
+<main class="pt-24 px-margin-mobile max-w-4xl mx-auto space-y-stack-md">
+<!-- Profile Summary Section -->
+<section class="bg-surface-container-low rounded-xl p-6 border border-outline-variant flex flex-col md:flex-row items-center gap-6">
+<div class="relative">
+<div class="w-24 h-24 rounded-full bg-primary-container flex items-center justify-center overflow-hidden border-4 border-surface">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="A professional headshot of a middle-aged South Asian man with a friendly smile, representing a community leader. The background is a soft-focus rural landscape under golden hour sunlight, conveying a sense of warmth and reliability. The lighting is high-key and professional, with colors following the brand's trustworthy blue and earth-toned palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnSsrNClS8nnGiHA25pk5920vdLZEB9E7wvwLOKCkkHKZgrUJhDUK4-Vu6FOHKT4sBUljTeFgxqEW6cwY7Ec1wSyq3VbYAx_IODA4DmGzhLwyHxzG0e0ZJGkXX2i-VhePA3ys6tBK9slcZiqpdd8-iIV2HdIn87C5By5DrRsurwkjXR9-N409G4Xu4bkIuE3dnb7MRlCc2DeWVBK6KU-c4PgTlotBuR1dKUjlhhf_dUtgQCfpOBmSa1S05UaSBRb4OpyxsJeD8QP4"/>
+</div>
+<button class="absolute bottom-0 right-0 bg-primary text-on-primary p-2 rounded-full shadow-lg">
+<span class="material-symbols-outlined text-[18px]" data-icon="edit">edit</span>
+</button>
+</div>
+<div class="text-center md:text-left flex-1">
+<h2 class="font-headline-md text-headline-md text-on-surface">Basavaraju K.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Village Head • Mandya District</p>
+<div class="mt-2 inline-flex items-center gap-2 bg-secondary-container px-3 py-1 rounded-full text-on-secondary-container font-label-lg text-label-lg">
+<span class="material-symbols-outlined text-[16px]" data-icon="verified_user" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+                    Verified Administrator
+                </div>
+</div>
+<div class="w-full md:w-auto">
+<img alt="Grama-Suvidha Logo" class="h-16 w-auto mx-auto md:ml-auto" data-alt="The minimalist logo for Grama-Suvidha, showcasing a stylized house and a rising sun icon in deep corporate blue and vibrant growth green. The logo is set against a clean white background, emphasizing a modern, professional identity for rural governance. The design is crisp with high contrast and geometric precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnphvR1Ji0TUUi-eu_S9_PaONcgd4i6HmggD1kf42g14t10AgTnDt1Ylz92tumxjH2FiAWecozy1Sz5GrbjGMEHAhCZUwc_JjDVyE8w9reO9BRoId0b8ZYLbKwhZxN4WP7HE8s3LtNemxynCOdG4Yi787NLOtl6JddBRyKMfYe9Ggbr6Wsbv2befRyHRGpFnmxYszmHXEmLQtJCzlpsiMoPNa_b-ix096ys9OOhhAkmKswbbDuXD_vuIkE7hVotVxFBnIp8jUpgL0"/>
+</div>
+</section>
+<!-- Bento Settings Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<!-- Language Toggle Card -->
+<div class="bg-surface rounded-xl border border-outline-variant p-stack-md flex flex-col justify-between">
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-2">Preferred Language</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Choose your primary language for the interface and notifications.</p>
+</div>
+<div class="flex gap-4">
+<button class="flex-1 py-4 px-6 rounded-lg border-2 border-primary bg-primary-container/10 text-primary font-bold transition-all">
+<span class="block text-headline-md">English</span>
+<span class="block text-label-lg opacity-80">Primary</span>
+</button>
+<button class="flex-1 py-4 px-6 rounded-lg border border-outline text-on-surface-variant hover:bg-surface-container-high transition-all">
+<span class="block text-headline-md">ಕನ್ನಡ</span>
+<span class="block text-label-lg opacity-80">Kannada</span>
+</button>
+</div>
+</div>
+<!-- Role Switch Card -->
+<div class="bg-surface rounded-xl border border-outline-variant p-stack-md">
+<h3 class="font-title-lg text-title-lg text-on-surface mb-2">Administrative Role</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Switch between roles to manage different departments.</p>
+<div class="space-y-3">
+<label class="flex items-center justify-between p-4 rounded-lg bg-surface-container-high border border-outline-variant cursor-pointer group">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="admin_panel_settings" style="font-variation-settings: 'FILL' 1;">admin_panel_settings</span>
+<span class="font-body-lg text-body-lg font-semibold">Administrator</span>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-primary flex items-center justify-center">
+<div class="w-3 h-3 bg-primary rounded-full"></div>
+</div>
+</label>
+<label class="flex items-center justify-between p-4 rounded-lg bg-surface border border-outline-variant cursor-pointer hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="person">person</span>
+<span class="font-body-lg text-body-lg">End User</span>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant"></div>
+</label>
+</div>
+</div>
+<!-- Legal & Privacy Card -->
+<div class="md:col-span-2 bg-surface rounded-xl border border-outline-variant p-stack-md">
+<h3 class="font-title-lg text-title-lg text-on-surface mb-6">Security &amp; Information</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<a class="flex items-center justify-between p-4 rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors" href="#">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="policy">policy</span>
+<span class="font-body-md text-body-md">Privacy Policy</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="chevron_right">chevron_right</span>
+</a>
+<a class="flex items-center justify-between p-4 rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors" href="#">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="gavel">gavel</span>
+<span class="font-body-md text-body-md">Terms of Service</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- Logout Section -->
+<div class="md:col-span-2 pt-4">
+<button class="w-full py-4 rounded-xl bg-error text-on-error font-bold text-headline-md flex items-center justify-center gap-2 shadow-lg active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+                    Logout
+                </button>
+<p class="text-center font-label-lg text-label-lg text-on-surface-variant mt-4">Gram Vikas App Version 2.4.0 • Made with pride for Karnataka</p>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-xl bg-surface-container shadow-md flex justify-around items-center h-touch-target-min pb-2">
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-5 py-1 hover:bg-surface-container-highest transition-transform duration-150 active:scale-90">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-lg text-label-lg">Dashboard</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-5 py-1 hover:bg-surface-container-highest transition-transform duration-150 active:scale-90">
+<span class="material-symbols-outlined" data-icon="account_tree">account_tree</span>
+<span class="font-label-lg text-label-lg">Projects</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-5 py-1 hover:bg-surface-container-highest transition-transform duration-150 active:scale-90">
+<span class="material-symbols-outlined" data-icon="report_problem">report_problem</span>
+<span class="font-label-lg text-label-lg">Issues</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-5 py-1 transition-transform duration-150 active:scale-90">
+<span class="material-symbols-outlined" data-icon="settings" style="font-variation-settings: 'FILL' 1;">settings</span>
+<span class="font-label-lg text-label-lg">Settings</span>
+</button>
+</nav>
+</body></html>

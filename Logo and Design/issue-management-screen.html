@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Issue Management - Gram Vikas</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-high": "#ebe7ec",
+                      "inverse-on-surface": "#f4eff5",
+                      "secondary-container": "#a0f399",
+                      "primary-container": "#0056d2",
+                      "on-surface": "#1c1b1f",
+                      "on-secondary": "#ffffff",
+                      "background": "#fdf8fd",
+                      "surface-container-highest": "#e5e1e7",
+                      "surface-container-low": "#f7f2f8",
+                      "error-container": "#ffdad6",
+                      "surface-tint": "#0056d2",
+                      "tertiary-fixed-dim": "#ffb598",
+                      "outline-variant": "#c3c6d6",
+                      "on-secondary-fixed-variant": "#005312",
+                      "tertiary-fixed": "#ffdbce",
+                      "on-error-container": "#93000a",
+                      "on-primary-fixed": "#001847",
+                      "error": "#ba1a1a",
+                      "on-secondary-fixed": "#002204",
+                      "on-background": "#1c1b1f",
+                      "inverse-primary": "#b2c5ff",
+                      "surface-dim": "#ddd9de",
+                      "surface": "#fdf8fd",
+                      "on-surface-variant": "#424654",
+                      "primary": "#0040a1",
+                      "on-secondary-container": "#217128",
+                      "on-error": "#ffffff",
+                      "secondary-fixed": "#a3f69c",
+                      "tertiary": "#70371e",
+                      "inverse-surface": "#313034",
+                      "on-primary": "#ffffff",
+                      "on-primary-container": "#ccd8ff",
+                      "secondary-fixed-dim": "#88d982",
+                      "on-tertiary-fixed-variant": "#70371e",
+                      "surface-variant": "#e5e1e7",
+                      "outline": "#737785",
+                      "on-primary-fixed-variant": "#0040a1",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container": "#f1ecf2",
+                      "on-tertiary-container": "#ffcfbc",
+                      "secondary": "#1b6d24",
+                      "surface-bright": "#fdf8fd",
+                      "on-tertiary": "#ffffff",
+                      "tertiary-container": "#8d4e33",
+                      "primary-fixed-dim": "#b2c5ff",
+                      "primary-fixed": "#dae2ff",
+                      "on-tertiary-fixed": "#370e00"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "touch-target-min": "48px",
+                      "margin-mobile": "24px",
+                      "base": "8px",
+                      "stack-md": "24px",
+                      "gutter": "16px",
+                      "stack-lg": "40px",
+                      "stack-sm": "12px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Public Sans"],
+                      "title-lg": ["Public Sans"],
+                      "body-lg": ["Public Sans"],
+                      "headline-lg": ["Public Sans"],
+                      "display-lg": ["Public Sans"],
+                      "body-md": ["Public Sans"],
+                      "label-lg": ["Public Sans"]
+              },
+              "fontSize": {
+                      "headline-md": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                      "title-lg": ["22px", {"lineHeight": "28px", "fontWeight": "500"}],
+                      "body-lg": ["18px", {"lineHeight": "26px", "letterSpacing": "0.5px", "fontWeight": "400"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "display-lg": ["57px", {"lineHeight": "64px", "letterSpacing": "-0.25px", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0.25px", "fontWeight": "400"}],
+                      "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500"}]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+        }
+      </style>
+</head>
+<body class="bg-background text-on-background min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex items-center justify-between px-margin-mobile h-16 w-full bg-surface border-b border-outline-variant transition-colors duration-200">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="account_balance">account_balance</span>
+<h1 class="font-headline-md text-headline-md font-bold text-primary">Gram Vikas</h1>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant hover:bg-surface-container-high rounded-full p-2 transition-colors duration-200 cursor-pointer" data-icon="search">search</span>
+<span class="material-symbols-outlined text-primary" data-icon="account_circle">account_circle</span>
+</div>
+</header>
+<main class="pt-24 px-margin-mobile max-w-5xl mx-auto">
+<!-- Dashboard Summary / Bento Header -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-stack-lg">
+<div class="md:col-span-2 p-stack-md bg-primary-container text-on-primary-container rounded-xl flex flex-col justify-between h-48 relative overflow-hidden">
+<div class="z-10">
+<h2 class="font-headline-lg text-headline-lg">Issue Resolution</h2>
+<p class="font-body-md text-body-md opacity-90 mt-2">Active citizen reports requiring administrative attention.</p>
+</div>
+<div class="z-10 flex gap-4 mt-auto">
+<div class="bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-lg">
+<span class="block font-label-lg text-label-lg opacity-80 uppercase tracking-wider">Active</span>
+<span class="block font-headline-md text-headline-md">24</span>
+</div>
+<div class="bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-lg">
+<span class="block font-label-lg text-label-lg opacity-80 uppercase tracking-wider">Avg. Time</span>
+<span class="block font-headline-md text-headline-md">2.4d</span>
+</div>
+</div>
+<!-- Abstract visual element -->
+<div class="absolute -right-10 -bottom-10 w-48 h-48 bg-white/5 rounded-full blur-3xl"></div>
+</div>
+<div class="p-stack-md bg-surface-container-highest border border-outline-variant rounded-xl flex flex-col items-center justify-center text-center">
+<img alt="Grama-Suvidha Logo" class="w-24 h-24 mb-4 object-contain" data-alt="A professional minimalist logo for Grama-Suvidha, featuring a stylized blue village house silhouette integrated with a bright green rising plant shoot. The design is clean and corporate, set against a pristine white background. It represents growth, governance, and rural development through modern digital services. The lighting is bright and even, emphasizing clarity and trust." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnphvR1Ji0TUUi-eu_S9_PaONcgd4i6HmggD1kf42g14t10AgTnDt1Ylz92tumxjH2FiAWecozy1Sz5GrbjGMEHAhCZUwc_JjDVyE8w9reO9BRoId0b8ZYLbKwhZxN4WP7HE8s3LtNemxynCOdG4Yi787NLOtl6JddBRyKMfYe9Ggbr6Wsbv2befRyHRGpFnmxYszmHXEmLQtJCzlpsiMoPNa_b-ix096ys9OOhhAkmKswbbDuXD_vuIkE7hVotVxFBnIp8jUpgL0"/>
+<span class="font-label-lg text-label-lg text-outline">System Health</span>
+<span class="font-title-lg text-title-lg text-secondary">Optimal Performance</span>
+</div>
+</section>
+<!-- Search & Filter Controls -->
+<section class="flex flex-col md:flex-row items-center gap-gutter mb-stack-md">
+<div class="relative w-full md:flex-1">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline" data-icon="search">search</span>
+<input class="w-full pl-12 pr-4 py-3 bg-surface border border-outline-variant rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Search issues by ID or description..." type="text"/>
+</div>
+<div class="flex gap-2 w-full md:w-auto">
+<button class="flex items-center gap-2 px-4 py-3 bg-surface border border-outline-variant rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container">
+<span class="material-symbols-outlined" data-icon="filter_list">filter_list</span>
+                    Filter
+                </button>
+<button class="flex items-center gap-2 px-4 py-3 bg-surface border border-outline-variant rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container">
+<span class="material-symbols-outlined" data-icon="sort">sort</span>
+                    Recent
+                </button>
+</div>
+</section>
+<!-- Issues List -->
+<div class="space-y-gutter">
+<!-- Issue Card 1: New -->
+<article class="bg-surface border border-outline-variant rounded-xl p-stack-md hover:shadow-md transition-shadow">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-4">
+<div class="flex-1 space-y-2">
+<div class="flex items-center gap-3">
+<span class="px-3 py-1 bg-error-container text-on-error-container rounded-full font-label-lg text-label-lg">New</span>
+<span class="text-outline font-label-lg text-label-lg">ID: #ISS-2941</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface">Broken hand pump in Ward 4</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">The central hand pump near the community hall has been leaking for three days. Residents are reporting significant water wastage.</p>
+<div class="flex items-center gap-4 mt-4">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-fixed-variant font-bold text-xs">RK</div>
+<span class="font-label-lg text-label-lg text-on-surface">Ramesh Kumar</span>
+</div>
+<div class="w-1 h-1 bg-outline-variant rounded-full"></div>
+<a class="font-label-lg text-label-lg text-primary flex items-center gap-1 hover:underline" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="link">link</span>
+                                Clean Water Project
+                            </a>
+</div>
+</div>
+<div class="flex flex-col gap-2 min-w-[160px]">
+<button class="w-full py-3 bg-primary text-on-primary rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-2 hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+                            Mark Resolved
+                        </button>
+<button class="w-full py-3 border border-outline text-on-surface-variant rounded-xl font-label-lg text-label-lg hover:bg-surface-container">
+                            Investigate
+                        </button>
+</div>
+</div>
+</article>
+<!-- Issue Card 2: Investigating -->
+<article class="bg-surface border border-outline-variant rounded-xl p-stack-md hover:shadow-md transition-shadow">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-4">
+<div class="flex-1 space-y-2">
+<div class="flex items-center gap-3">
+<span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed-variant rounded-full font-label-lg text-label-lg">Investigating</span>
+<span class="text-outline font-label-lg text-label-lg">ID: #ISS-2810</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface">Solar streetlight malfunctioning</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Three lights on the main road are flickering after 8 PM. Creating safety concerns for evening commuters.</p>
+<div class="flex items-center gap-4 mt-4">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-bold text-xs">SP</div>
+<span class="font-label-lg text-label-lg text-on-surface">Sunita Patel</span>
+</div>
+<div class="w-1 h-1 bg-outline-variant rounded-full"></div>
+<a class="font-label-lg text-label-lg text-primary flex items-center gap-1 hover:underline" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="link">link</span>
+                                Rural Electrification
+                            </a>
+</div>
+</div>
+<div class="flex flex-col gap-2 min-w-[160px]">
+<button class="w-full py-3 bg-primary text-on-primary rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-2 hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+                            Mark Resolved
+                        </button>
+<button class="w-full py-3 border border-outline text-on-surface-variant rounded-xl font-label-lg text-label-lg hover:bg-surface-container">
+                            Update Status
+                        </button>
+</div>
+</div>
+</article>
+<!-- Issue Card 3: Resolved -->
+<article class="bg-surface-container-low border border-outline-variant rounded-xl p-stack-md opacity-75 grayscale-[0.5]">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-4">
+<div class="flex-1 space-y-2">
+<div class="flex items-center gap-3">
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full font-label-lg text-label-lg">Resolved</span>
+<span class="text-outline font-label-lg text-label-lg">ID: #ISS-2765</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface">Debris removal from secondary road</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Construction material blocking the path near the primary school. Needs immediate clearance for school buses.</p>
+<div class="flex items-center gap-4 mt-4">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed-dim text-on-tertiary-fixed flex items-center justify-center font-bold text-xs">AJ</div>
+<span class="font-label-lg text-label-lg text-on-surface">Anil Jha</span>
+</div>
+<div class="w-1 h-1 bg-outline-variant rounded-full"></div>
+<a class="font-label-lg text-label-lg text-primary flex items-center gap-1 hover:underline" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="link">link</span>
+                                Road Maintenance
+                            </a>
+</div>
+</div>
+<div class="flex flex-col gap-2 min-w-[160px]">
+<div class="w-full py-3 bg-secondary-container text-on-secondary-container rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" data-icon="task_alt">task_alt</span>
+                            Completed
+                        </div>
+</div>
+</div>
+</article>
+</div>
+<!-- Load More -->
+<div class="mt-stack-lg flex justify-center pb-12">
+<button class="px-8 py-3 border-2 border-primary text-primary font-label-lg text-label-lg rounded-full hover:bg-primary-fixed transition-colors">
+                Load More Issues
+            </button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-xl bg-surface-container shadow-md pb-2 h-touch-target-min flex justify-around items-center">
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-5 py-1 hover:bg-surface-container-highest transition-transform duration-150 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-lg text-label-lg">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-5 py-1 hover:bg-surface-container-highest transition-transform duration-150 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="account_tree">account_tree</span>
+<span class="font-label-lg text-label-lg">Projects</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-5 py-1 transition-transform duration-150 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="report_problem">report_problem</span>
+<span class="font-label-lg text-label-lg">Issues</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-5 py-1 hover:bg-surface-container-highest transition-transform duration-150 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-lg text-label-lg">Settings</span>
+</a>
+</nav>
+</body></html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "surface-container-high": "#ebe7ec",
+                  "inverse-on-surface": "#f4eff5",
+                  "secondary-container": "#a0f399",
+                  "primary-container": "#0056d2",
+                  "on-surface": "#1c1b1f",
+                  "on-secondary": "#ffffff",
+                  "background": "#fdf8fd",
+                  "surface-container-highest": "#e5e1e7",
+                  "surface-container-low": "#f7f2f8",
+                  "error-container": "#ffdad6",
+                  "surface-tint": "#0056d2",
+                  "tertiary-fixed-dim": "#ffb598",
+                  "outline-variant": "#c3c6d6",
+                  "on-secondary-fixed-variant": "#005312",
+                  "tertiary-fixed": "#ffdbce",
+                  "on-error-container": "#93000a",
+                  "on-primary-fixed": "#001847",
+                  "error": "#ba1a1a",
+                  "on-secondary-fixed": "#002204",
+                  "on-background": "#1c1b1f",
+                  "inverse-primary": "#b2c5ff",
+                  "surface-dim": "#ddd9de",
+                  "surface": "#fdf8fd",
+                  "on-surface-variant": "#424654",
+                  "primary": "#0040a1",
+                  "on-secondary-container": "#217128",
+                  "on-error": "#ffffff",
+                  "secondary-fixed": "#a3f69c",
+                  "tertiary": "#70371e",
+                  "inverse-surface": "#313034",
+                  "on-primary": "#ffffff",
+                  "on-primary-container": "#ccd8ff",
+                  "secondary-fixed-dim": "#88d982",
+                  "on-tertiary-fixed-variant": "#70371e",
+                  "surface-variant": "#e5e1e7",
+                  "outline": "#737785",
+                  "on-primary-fixed-variant": "#0040a1",
+                  "surface-container-lowest": "#ffffff",
+                  "surface-container": "#f1ecf2",
+                  "on-tertiary-container": "#ffcfbc",
+                  "secondary": "#1b6d24",
+                  "surface-bright": "#fdf8fd",
+                  "on-tertiary": "#ffffff",
+                  "tertiary-container": "#8d4e33",
+                  "primary-fixed-dim": "#b2c5ff",
+                  "primary-fixed": "#dae2ff",
+                  "on-tertiary-fixed": "#370e00"
+          },
+          "borderRadius": {
+                  "DEFAULT": "0.25rem",
+                  "lg": "0.5rem",
+                  "xl": "0.75rem",
+                  "full": "9999px"
+          },
+          "spacing": {
+                  "touch-target-min": "48px",
+                  "margin-mobile": "24px",
+                  "base": "8px",
+                  "stack-md": "24px",
+                  "gutter": "16px",
+                  "stack-lg": "40px",
+                  "stack-sm": "12px"
+          },
+          "fontFamily": {
+                  "headline-md": ["Public Sans"],
+                  "title-lg": ["Public Sans"],
+                  "body-lg": ["Public Sans"],
+                  "headline-lg": ["Public Sans"],
+                  "display-lg": ["Public Sans"],
+                  "body-md": ["Public Sans"],
+                  "label-lg": ["Public Sans"]
+          },
+          "fontSize": {
+                  "headline-md": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                  "title-lg": ["22px", {"lineHeight": "28px", "fontWeight": "500"}],
+                  "body-lg": ["18px", {"lineHeight": "26px", "letterSpacing": "0.5px", "fontWeight": "400"}],
+                  "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                  "display-lg": ["57px", {"lineHeight": "64px", "letterSpacing": "-0.25px", "fontWeight": "700"}],
+                  "body-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0.25px", "fontWeight": "400"}],
+                  "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    body {
+      background-color: #fdf8fd;
+      font-family: 'Public Sans', sans-serif;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex items-center justify-between px-margin-mobile h-16 bg-surface border-b border-outline-variant">
+<div class="flex items-center gap-base">
+<span class="material-symbols-outlined text-primary" data-icon="account_balance">account_balance</span>
+<h1 class="font-headline-md text-headline-md font-bold text-primary">Gram Vikas</h1>
+</div>
+<div class="flex items-center gap-base">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="account_circle">account_circle</span>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="pt-24 px-margin-mobile max-w-4xl mx-auto">
+<!-- Hero Title & Tag -->
+<div class="mb-stack-lg">
+<div class="flex items-center gap-base mb-base">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full font-label-lg text-label-lg">Active Project</span>
+<span class="text-on-surface-variant font-label-lg text-label-lg">ID: GV-2024-081</span>
+</div>
+<h2 class="font-display-lg text-headline-lg md:text-display-lg text-on-surface tracking-tight leading-tight">Village Well Restoration</h2>
+</div>
+<!-- Content Layout: Bento Style -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Primary Info & Description -->
+<div class="md:col-span-2 space-y-stack-md">
+<section class="bg-surface-container-lowest p-stack-md rounded-xl border border-outline-variant">
+<h3 class="font-title-lg text-title-lg text-on-surface mb-base">About the Project</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+            This initiative aims to restore the historic central well in the village square. Over decades, structural cracks and sediment buildup have reduced water quality. Our goal is to reinforce the walls, install a sustainable solar-powered filtration system, and beautify the surrounding catchment area to serve as a reliable source of potable water for over 200 households.
+          </p>
+</section>
+<!-- Image Comparison Section -->
+<section class="space-y-base">
+<h3 class="font-title-lg text-title-lg text-on-surface">Visual Progress</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-base">
+<div class="relative group overflow-hidden rounded-xl border border-outline-variant">
+<img class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" data-alt="A photograph of a weathered, crumbling stone well in a dusty rural setting. The environment is harsh with dry earth and sparse vegetation, captured in a documentary photography style with high contrast and warm, natural sunlight. The image conveys a sense of urgent need for restoration in a modern corporate UI context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQwhYRlO5THZGGO2UPbgTTDgT2jzyBlaeFryGpIGkJQAmkyQr9niKUHN4-vfFu3yXOyWJraRzJLy9hKDyzZcFMxXu_xcG4rJunMFuYe0kt25G9wkARhCY1bGqNHclEQtUIjbQnyFg6TT52VagTSJoK_p8F0JBBp611PlRRXe-zv4-sk-fzrStYu7hBHdBY44O4O5UIggr0SY-L6ZWGkgFgId_u_ZOyVFrz4i6xdAzOb8VIMfbUpBvyxC341BO3bbOp-I5PyeclhgY"/>
+<div class="absolute bottom-2 left-2 bg-inverse-surface/80 text-inverse-on-surface px-3 py-1 rounded-lg font-label-lg text-label-lg">Before Restoration</div>
+</div>
+<div class="relative group overflow-hidden rounded-xl border border-outline-variant">
+<img class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" data-alt="A professional architectural rendering of a restored village well with clean stone masonry and a modern wooden canopy. The surrounding area features lush green grass and clean stone paving under a bright, clear blue sky. The aesthetic is clean, bright, and hopeful, perfectly aligning with a modern digital stewardship interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDm5AU9GC7-vWjG7NKQ9tYr3XBSFtOBCZ2_6q3406B3VlXq9QB_YypEyhMjMIpukRS2439LnCI3LuW2FrVxj1aLDHlp4iM71trPj9PUiftJu6I-u4_8CwchUUcFRpRSOu_acAoevLuu-l8RwNIJjKZMLdA7OG172cZmgQcUtN-0PSAbKLeDL3N7L0ThfApnpygsBuNuyNoo0igQw2Tw520dMVko5pTiUqUpRblwTLzykb9IVD1JcPoJrPBxuvdNYEaIk1Ap4pLueU"/>
+<div class="absolute bottom-2 left-2 bg-secondary text-on-secondary px-3 py-1 rounded-lg font-label-lg text-label-lg">Proposed After</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Side Cards: Budget & Timeline -->
+<div class="space-y-gutter">
+<div class="bg-surface-container-low p-stack-md rounded-xl border border-outline-variant">
+<div class="flex items-center gap-base mb-base">
+<span class="material-symbols-outlined text-primary" data-icon="payments">payments</span>
+<span class="font-label-lg text-label-lg text-on-surface-variant">Allocated Budget</span>
+</div>
+<p class="font-headline-md text-headline-md text-on-surface">₹4,50,000</p>
+<div class="mt-base pt-base border-t border-outline-variant">
+<p class="font-label-lg text-label-lg text-on-surface-variant">Disbursed: ₹2,70,000</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-stack-md rounded-xl border border-outline-variant">
+<div class="flex items-center gap-base mb-base">
+<span class="material-symbols-outlined text-primary" data-icon="event">event</span>
+<span class="font-label-lg text-label-lg text-on-surface-variant">Project Timeline</span>
+</div>
+<div class="space-y-base">
+<div>
+<p class="font-label-lg text-label-lg text-on-surface-variant">Start Date</p>
+<p class="font-body-md text-body-md text-on-surface font-semibold">Jan 12, 2024</p>
+</div>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface-variant">Est. Completion</p>
+<p class="font-body-md text-body-md text-on-surface font-semibold">Mar 30, 2024</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Progress Tracker Section -->
+<section class="mt-stack-lg bg-surface-container p-stack-md rounded-xl border border-outline-variant">
+<div class="flex justify-between items-end mb-4">
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface">Current Status</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Wall reinforcement in progress</p>
+</div>
+<div class="text-right">
+<span class="font-headline-md text-headline-md text-primary">60%</span>
+<p class="font-label-lg text-label-lg text-on-surface-variant">Complete</p>
+</div>
+</div>
+<div class="w-full bg-surface-variant rounded-full h-4 overflow-hidden">
+<div class="bg-secondary h-full rounded-full transition-all duration-500" style="width: 60%"></div>
+</div>
+<div class="mt-stack-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle">check_circle</span>
+<p class="font-label-lg text-label-lg text-on-surface-variant">Next milestone: Filtration unit installation</p>
+</div>
+</section>
+<!-- Action Cluster -->
+<section class="mt-stack-lg grid grid-cols-1 sm:grid-cols-2 gap-gutter">
+<button class="flex items-center justify-center gap-base h-touch-target-min bg-primary text-on-primary rounded-xl px-margin-mobile font-label-lg text-label-lg hover:brightness-110 active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="rate_review">rate_review</span>
+        Give Feedback
+      </button>
+<button class="flex items-center justify-center gap-base h-touch-target-min border-2 border-error text-error rounded-xl px-margin-mobile font-label-lg text-label-lg hover:bg-error-container/20 active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="report_problem">report_problem</span>
+        Report Issue
+      </button>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-xl bg-surface-container shadow-md">
+<div class="flex justify-around items-center w-full h-touch-target-min pb-2">
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-5 py-1 hover:bg-surface-container-highest transition-transform duration-150 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-lg text-label-lg">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-5 py-1 transition-transform duration-150 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="account_tree">account_tree</span>
+<span class="font-label-lg text-label-lg">Projects</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-5 py-1 hover:bg-surface-container-highest transition-transform duration-150 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="report_problem">report_problem</span>
+<span class="font-label-lg text-label-lg">Issues</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-5 py-1 hover:bg-surface-container-highest transition-transform duration-150 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-lg text-label-lg">Settings</span>
+</a>
+</div>
+</nav>
+</body></html>

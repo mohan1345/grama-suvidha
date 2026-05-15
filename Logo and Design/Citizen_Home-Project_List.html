@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#ebe7ec",
+                    "inverse-on-surface": "#f4eff5",
+                    "secondary-container": "#a0f399",
+                    "primary-container": "#0056d2",
+                    "on-surface": "#1c1b1f",
+                    "on-secondary": "#ffffff",
+                    "background": "#fdf8fd",
+                    "surface-container-highest": "#e5e1e7",
+                    "surface-container-low": "#f7f2f8",
+                    "error-container": "#ffdad6",
+                    "surface-tint": "#0056d2",
+                    "tertiary-fixed-dim": "#ffb598",
+                    "outline-variant": "#c3c6d6",
+                    "on-secondary-fixed-variant": "#005312",
+                    "tertiary-fixed": "#ffdbce",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed": "#001847",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed": "#002204",
+                    "on-background": "#1c1b1f",
+                    "inverse-primary": "#b2c5ff",
+                    "surface-dim": "#ddd9de",
+                    "surface": "#fdf8fd",
+                    "on-surface-variant": "#424654",
+                    "primary": "#0040a1",
+                    "on-secondary-container": "#217128",
+                    "on-error": "#ffffff",
+                    "secondary-fixed": "#a3f69c",
+                    "tertiary": "#70371e",
+                    "inverse-surface": "#313034",
+                    "on-primary": "#ffffff",
+                    "on-primary-container": "#ccd8ff",
+                    "secondary-fixed-dim": "#88d982",
+                    "on-tertiary-fixed-variant": "#70371e",
+                    "surface-variant": "#e5e1e7",
+                    "outline": "#737785",
+                    "on-primary-fixed-variant": "#0040a1",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#f1ecf2",
+                    "on-tertiary-container": "#ffcfbc",
+                    "secondary": "#1b6d24",
+                    "surface-bright": "#fdf8fd",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#8d4e33",
+                    "primary-fixed-dim": "#b2c5ff",
+                    "primary-fixed": "#dae2ff",
+                    "on-tertiary-fixed": "#370e00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "24px",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "touch-target-min": "48px",
+                    "margin-mobile": "24px",
+                    "base": "8px",
+                    "stack-md": "24px",
+                    "gutter": "16px",
+                    "stack-lg": "40px",
+                    "stack-sm": "12px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Public Sans"],
+                    "title-lg": ["Public Sans"],
+                    "body-lg": ["Public Sans"],
+                    "headline-lg": ["Public Sans"],
+                    "display-lg": ["Public Sans"],
+                    "body-md": ["Public Sans"],
+                    "label-lg": ["Public Sans"]
+            },
+            "fontSize": {
+                    "headline-md": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "title-lg": ["22px", {"lineHeight": "28px", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "26px", "letterSpacing": "0.5px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "display-lg": ["57px", {"lineHeight": "64px", "letterSpacing": "-0.25px", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0.25px", "fontWeight": "400"}],
+                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen pb-24">
+<!-- TopAppBar Execution -->
+<header class="fixed top-0 w-full z-50 bg-surface dark:bg-inverse-surface border-b border-outline-variant dark:border-outline flex items-center justify-between px-margin-mobile h-16 w-full">
+<div class="flex items-center gap-base">
+<span class="material-symbols-outlined text-primary dark:text-inverse-primary" style="font-variation-settings: 'FILL' 1;">account_balance</span>
+<h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-inverse-primary">Gram Vikas</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="w-touch-target-min h-touch-target-min flex items-center justify-center rounded-full hover:bg-surface-container-high dark:hover:bg-surface-dim transition-colors duration-200">
+<span class="material-symbols-outlined text-on-surface-variant dark:text-on-surface-variant">search</span>
+</button>
+<button class="w-touch-target-min h-touch-target-min flex items-center justify-center rounded-full hover:bg-surface-container-high dark:hover:bg-surface-dim transition-colors duration-200">
+<span class="material-symbols-outlined text-primary dark:text-inverse-primary">account_circle</span>
+</button>
+</div>
+</header>
+<main class="pt-20 px-margin-mobile max-w-2xl mx-auto">
+<!-- Search Section -->
+<section class="mt-stack-md">
+<div class="relative group">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline">search</span>
+</div>
+<input class="w-full h-14 pl-12 pr-4 bg-surface-container-low border-none rounded-xl focus:ring-2 focus:ring-primary font-body-md text-on-surface" placeholder="Search village projects..." type="text"/>
+</div>
+</section>
+<!-- Filter Chips -->
+<section class="mt-stack-md overflow-x-auto flex gap-3 no-scrollbar py-2">
+<button class="flex-shrink-0 px-6 py-2 rounded-full bg-primary text-on-primary font-label-lg shadow-sm">All</button>
+<button class="flex-shrink-0 px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant font-label-lg hover:bg-surface-container-highest transition-colors">Ongoing</button>
+<button class="flex-shrink-0 px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant font-label-lg hover:bg-surface-container-highest transition-colors">Completed</button>
+</section>
+<!-- Hero Bento Area -->
+<section class="mt-stack-lg grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="bg-primary-container text-on-primary-container p-stack-md rounded-xl flex flex-col justify-between min-h-[160px]">
+<div>
+<h2 class="font-title-lg text-title-lg text-on-primary-container">Total Budget Allocation</h2>
+<p class="font-headline-lg text-headline-lg mt-base">₹42,50,000</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-primary-container">trending_up</span>
+<span class="font-label-lg text-label-lg">12% more than last year</span>
+</div>
+</div>
+<div class="bg-secondary-container text-on-secondary-container p-stack-md rounded-xl flex flex-col justify-between min-h-[160px]">
+<div>
+<h2 class="font-title-lg text-title-lg text-on-secondary-container">Active Projects</h2>
+<p class="font-headline-lg text-headline-lg mt-base">08</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-secondary-container" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-lg text-label-lg">4 nearing completion</span>
+</div>
+</div>
+</section>
+<!-- Project List Title -->
+<h3 class="mt-stack-lg font-headline-md text-headline-md text-on-surface">Development Projects</h3>
+<!-- Project Cards List -->
+<div class="mt-stack-md space-y-stack-md">
+<!-- Project Card 1 -->
+<article class="bg-surface-container-lowest border border-outline-variant p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h4 class="font-title-lg text-title-lg text-primary">Main Road Paving</h4>
+<p class="font-label-lg text-label-lg text-outline flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span> Ward No. 4, Central Village
+                        </p>
+</div>
+<span class="bg-primary-container text-on-primary-container px-3 py-1 rounded-full font-label-lg">Ongoing</span>
+</div>
+<img class="w-full h-40 object-cover rounded-lg mb-4" data-alt="A wide angle photograph of a rural road construction site under a bright blue sky. Steam rollers and construction equipment are visible on a freshly laid asphalt stretch. The surrounding landscape features lush green fields and traditional village structures. The lighting is warm and clear, emphasizing a sense of community progress and infrastructure modernization in a clean, high-contrast light-mode style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtBZ9U4uS8OsOxFABl9N6FtzBJ3NUrclAMjJEsBBWFL7P7O1X5y0B3KqxwMtpQGO_iQN73YgFGkXlBkTbEmlhvAgG1CIFJ8Z1GaPn_6DU39w8IK0-rxSLIq0BPl8PxDFRlbSNDoSOkn75Oz_u14NqcnTc0lVY7REI3RFtAQbajgfACAKCuDr1t6Lou20ZTX7E1WxMqsOk-9T10puRwN-ncbwfSYccq_NVAyhMYns8Xe17ym-y-5r22HR0XCk2dmWdYo6CC_cvEwpY"/>
+<div class="flex justify-between items-center mb-2">
+<span class="font-body-md text-body-md text-on-surface font-semibold">₹5,00,000</span>
+<span class="font-label-lg text-label-lg text-primary">60%</span>
+</div>
+<div class="w-full bg-surface-container-high h-3 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 60%"></div>
+</div>
+<button class="mt-6 w-full py-3 bg-surface-variant text-on-surface-variant font-label-lg rounded-full flex items-center justify-center gap-2 hover:bg-surface-container-highest transition-colors">
+                    View Details <span class="material-symbols-outlined">chevron_right</span>
+</button>
+</article>
+<!-- Project Card 2 -->
+<article class="bg-surface-container-lowest border border-outline-variant p-6 rounded-xl shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h4 class="font-title-lg text-title-lg text-primary">Primary Health Center Refurbishment</h4>
+<p class="font-label-lg text-label-lg text-outline flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span> Market Square Area
+                        </p>
+</div>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full font-label-lg">Completed</span>
+</div>
+<div class="flex justify-between items-center mb-2">
+<span class="font-body-md text-body-md text-on-surface font-semibold">₹12,40,000</span>
+<span class="font-label-lg text-label-lg text-secondary">100%</span>
+</div>
+<div class="w-full bg-surface-container-high h-3 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 100%"></div>
+</div>
+<button class="mt-6 w-full py-3 border border-outline text-primary font-label-lg rounded-full flex items-center justify-center gap-2 hover:bg-surface-container-low transition-colors">
+                    Download Audit Report <span class="material-symbols-outlined">description</span>
+</button>
+</article>
+<!-- Project Card 3 -->
+<article class="bg-surface-container-lowest border border-outline-variant p-6 rounded-xl shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h4 class="font-title-lg text-title-lg text-primary">Community Well Boring</h4>
+<p class="font-label-lg text-label-lg text-outline flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span> North Farms Extension
+                        </p>
+</div>
+<span class="bg-primary-container text-on-primary-container px-3 py-1 rounded-full font-label-lg">Ongoing</span>
+</div>
+<div class="flex justify-between items-center mb-2">
+<span class="font-body-md text-body-md text-on-surface font-semibold">₹2,50,000</span>
+<span class="font-label-lg text-label-lg text-primary">25%</span>
+</div>
+<div class="w-full bg-surface-container-high h-3 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 25%"></div>
+</div>
+</article>
+</div>
+</main>
+<!-- BottomNavBar Execution -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-xl bg-surface-container dark:bg-surface-container-low shadow-md flex justify-around items-center w-full h-touch-target-min pb-2">
+<!-- Dashboard / Home Active -->
+<a class="flex flex-col items-center justify-center bg-secondary-container dark:bg-on-secondary-fixed-variant text-on-secondary-container dark:text-secondary-fixed rounded-full px-5 py-1 transition-transform duration-150 scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="font-label-lg text-label-lg">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-5 py-1 hover:bg-surface-container-highest transition-transform duration-150 scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined">account_tree</span>
+<span class="font-label-lg text-label-lg">Projects</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-5 py-1 hover:bg-surface-container-highest transition-transform duration-150 scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined">report_problem</span>
+<span class="font-label-lg text-label-lg">Issues</span>
+</a>
+<!-- Settings -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-5 py-1 hover:bg-surface-container-highest transition-transform duration-150 scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label-lg text-label-lg">Settings</span>
+</a>
+</nav>
+<!-- FAB Suppression Logic: FAB only on task-focused screens. Suppressed here for Dashboard. -->
+</body></html>

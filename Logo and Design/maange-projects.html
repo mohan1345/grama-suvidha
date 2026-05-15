@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container-high": "#ebe7ec",
+            "inverse-on-surface": "#f4eff5",
+            "secondary-container": "#a0f399",
+            "primary-container": "#0056d2",
+            "on-surface": "#1c1b1f",
+            "on-secondary": "#ffffff",
+            "background": "#fdf8fd",
+            "surface-container-highest": "#e5e1e7",
+            "surface-container-low": "#f7f2f8",
+            "error-container": "#ffdad6",
+            "surface-tint": "#0056d2",
+            "tertiary-fixed-dim": "#ffb598",
+            "outline-variant": "#c3c6d6",
+            "on-secondary-fixed-variant": "#005312",
+            "tertiary-fixed": "#ffdbce",
+            "on-error-container": "#93000a",
+            "on-primary-fixed": "#001847",
+            "error": "#ba1a1a",
+            "on-secondary-fixed": "#002204",
+            "on-background": "#1c1b1f",
+            "inverse-primary": "#b2c5ff",
+            "surface-dim": "#ddd9de",
+            "surface": "#fdf8fd",
+            "on-surface-variant": "#424654",
+            "primary": "#0040a1",
+            "on-secondary-container": "#217128",
+            "on-error": "#ffffff",
+            "secondary-fixed": "#a3f69c",
+            "tertiary": "#70371e",
+            "inverse-surface": "#313034",
+            "on-primary": "#ffffff",
+            "on-primary-container": "#ccd8ff",
+            "secondary-fixed-dim": "#88d982",
+            "on-tertiary-fixed-variant": "#70371e",
+            "surface-variant": "#e5e1e7",
+            "outline": "#737785",
+            "on-primary-fixed-variant": "#0040a1",
+            "surface-container-lowest": "#ffffff",
+            "surface-container": "#f1ecf2",
+            "on-tertiary-container": "#ffcfbc",
+            "secondary": "#1b6d24",
+            "surface-bright": "#fdf8fd",
+            "on-tertiary": "#ffffff",
+            "tertiary-container": "#8d4e33",
+            "primary-fixed-dim": "#b2c5ff",
+            "primary-fixed": "#dae2ff",
+            "on-tertiary-fixed": "#370e00"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "touch-target-min": "48px",
+            "margin-mobile": "24px",
+            "base": "8px",
+            "stack-md": "24px",
+            "gutter": "16px",
+            "stack-lg": "40px",
+            "stack-sm": "12px"
+          },
+          "fontFamily": {
+            "headline-md": ["Public Sans"],
+            "title-lg": ["Public Sans"],
+            "body-lg": ["Public Sans"],
+            "headline-lg": ["Public Sans"],
+            "display-lg": ["Public Sans"],
+            "body-md": ["Public Sans"],
+            "label-lg": ["Public Sans"]
+          },
+          "fontSize": {
+            "headline-md": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+            "title-lg": ["22px", {"lineHeight": "28px", "fontWeight": "500"}],
+            "body-lg": ["18px", {"lineHeight": "26px", "letterSpacing": "0.5px", "fontWeight": "400"}],
+            "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+            "display-lg": ["57px", {"lineHeight": "64px", "letterSpacing": "-0.25px", "fontWeight": "700"}],
+            "body-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0.25px", "fontWeight": "400"}],
+            "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body { font-family: 'Public Sans', sans-serif; }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .scrollbar-hide::-webkit-scrollbar { display: none; }
+    .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="bg-background text-on-background min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface dark:bg-inverse-surface border-b border-outline-variant dark:border-outline flex items-center justify-between px-margin-mobile h-16 w-full">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary dark:text-inverse-primary" style="font-size: 24px;">account_balance</span>
+<h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-inverse-primary">Gram Vikas</h1>
+</div>
+<div class="flex items-center gap-gutter">
+<div class="w-10 h-10 rounded-full overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="A sophisticated minimalist logo for a rural governance platform, featuring a stylized house integrated with a bright green leaf and a rising sun. The graphic is set against a clean white background, utilizing a professional palette of deep blue and earthy green. The aesthetic is modern and corporate, reflecting efficiency, growth, and community trust in a digital light-mode environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnphvR1Ji0TUUi-eu_S9_PaONcgd4i6HmggD1kf42g14t10AgTnDt1Ylz92tumxjH2FiAWecozy1Sz5GrbjGMEHAhCZUwc_JjDVyE8w9reO9BRoId0b8ZYLbKwhZxN4WP7HE8s3LtNemxynCOdG4Yi787NLOtl6JddBRyKMfYe9Ggbr6Wsbv2befRyHRGpFnmxYszmHXEmLQtJCzlpsiMoPNa_b-ix096ys9OOhhAkmKswbbDuXD_vuIkE7hVotVxFBnIp8jUpgL0"/>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant" style="font-size: 24px;">account_circle</span>
+</div>
+</header>
+<main class="pt-24 px-margin-mobile max-w-5xl mx-auto">
+<!-- Header Section -->
+<div class="mb-stack-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-gutter">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-background">Project Management</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Oversee and manage community infrastructure initiatives.</p>
+</div>
+<button class="flex items-center justify-center gap-2 bg-primary text-on-primary px-6 py-3 rounded-xl font-label-lg text-label-lg hover:shadow-lg transition-all active:scale-95">
+<span class="material-symbols-outlined">add</span>
+          NEW PROJECT
+        </button>
+</div>
+</div>
+<!-- Filter & Search Bar -->
+<div class="bg-surface-container border border-outline-variant p-4 rounded-2xl mb-stack-md flex flex-col md:flex-row gap-4 items-center">
+<div class="relative w-full flex-grow">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full bg-surface-container-lowest border-none rounded-xl pl-10 pr-4 py-3 focus:ring-2 focus:ring-primary text-body-md" placeholder="Search projects by name or ID..." type="text"/>
+</div>
+<div class="flex gap-2 w-full md:w-auto">
+<select class="bg-surface-container-lowest border-none rounded-xl py-3 px-4 focus:ring-2 focus:ring-primary text-label-lg w-full">
+<option>All Statuses</option>
+<option>In Progress</option>
+<option>Pending Approval</option>
+<option>Completed</option>
+</select>
+<button class="bg-surface-container-highest p-3 rounded-xl hover:bg-outline-variant transition-colors">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+</div>
+</div>
+<!-- Bento-style Project List -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4">
+<!-- Project Item 1 -->
+<div class="group bg-surface-container-low border border-outline-variant rounded-2xl p-5 hover:border-primary transition-all duration-300 flex flex-col lg:flex-row items-start lg:items-center gap-4">
+<div class="w-16 h-16 rounded-xl bg-secondary-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-on-secondary-fixed-variant text-[32px]">water_drop</span>
+</div>
+<div class="flex-grow">
+<div class="flex items-center gap-3">
+<h3 class="font-title-lg text-title-lg text-on-surface">Community Well Rejuvenation</h3>
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-fixed-variant rounded-full text-label-lg font-bold">ACTIVE</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Phase 2: Installing filtration system in North Block. 85% complete.</p>
+<div class="mt-3 flex items-center gap-4">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span class="text-label-lg">Due: Oct 12</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">person</span>
+<span class="text-label-lg">Admin: S. Kumar</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 lg:border-l lg:border-outline-variant lg:pl-6 w-full lg:w-auto mt-4 lg:mt-0">
+<button class="flex-grow lg:flex-none p-3 rounded-xl bg-surface-container-highest hover:bg-primary-container hover:text-on-primary-container transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">edit</span>
+<span class="lg:hidden font-label-lg">Edit</span>
+</button>
+<button class="flex-grow lg:flex-none p-3 rounded-xl bg-surface-container-highest hover:bg-error-container hover:text-on-error-container transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">delete</span>
+<span class="lg:hidden font-label-lg">Delete</span>
+</button>
+</div>
+</div>
+<!-- Project Item 2 -->
+<div class="group bg-surface-container-low border border-outline-variant rounded-2xl p-5 hover:border-primary transition-all duration-300 flex flex-col lg:flex-row items-start lg:items-center gap-4">
+<div class="w-16 h-16 rounded-xl bg-tertiary-fixed flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-on-tertiary-fixed text-[32px]">bolt</span>
+</div>
+<div class="flex-grow">
+<div class="flex items-center gap-3">
+<h3 class="font-title-lg text-title-lg text-on-surface">Solar Street Lighting</h3>
+<span class="px-3 py-1 bg-surface-container-highest text-on-surface-variant rounded-full text-label-lg font-bold">PENDING</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Awaiting environmental clearance for 45 LED poles in the market square.</p>
+<div class="mt-3 flex items-center gap-4">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span class="text-label-lg">Due: Nov 05</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 lg:border-l lg:border-outline-variant lg:pl-6 w-full lg:w-auto mt-4 lg:mt-0">
+<button class="flex-grow lg:flex-none p-3 rounded-xl bg-surface-container-highest hover:bg-primary-container transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined">edit</span>
+</button>
+<button class="flex-grow lg:flex-none p-3 rounded-xl bg-surface-container-highest hover:bg-error-container transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+</div>
+<!-- Project Item 3 -->
+<div class="group bg-surface-container-low border border-outline-variant rounded-2xl p-5 hover:border-primary transition-all duration-300 flex flex-col lg:flex-row items-start lg:items-center gap-4 opacity-75">
+<div class="w-16 h-16 rounded-xl bg-surface-container-high flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-on-surface-variant text-[32px]">school</span>
+</div>
+<div class="flex-grow">
+<div class="flex items-center gap-3">
+<h3 class="font-title-lg text-title-lg text-on-surface">School Library Upgrade</h3>
+<span class="px-3 py-1 bg-surface-dim text-on-surface-variant rounded-full text-label-lg font-bold">COMPLETED</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Successfully deployed 15 computers and 500 new textbooks.</p>
+</div>
+<div class="flex items-center gap-2 lg:border-l lg:border-outline-variant lg:pl-6 w-full lg:w-auto mt-4 lg:mt-0">
+<button class="flex-grow lg:flex-none p-3 rounded-xl bg-surface-container-highest hover:bg-primary-container transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+<button class="flex-grow lg:flex-none p-3 rounded-xl bg-surface-container-highest hover:bg-error-container transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+</div>
+<!-- Project Item 4 -->
+<div class="group bg-surface-container-low border border-outline-variant rounded-2xl p-5 hover:border-primary transition-all duration-300 flex flex-col lg:flex-row items-start lg:items-center gap-4">
+<div class="w-16 h-16 rounded-xl bg-error-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-on-error-container text-[32px]">warning</span>
+</div>
+<div class="flex-grow">
+<div class="flex items-center gap-3">
+<h3 class="font-title-lg text-title-lg text-on-surface">Dam Maintenance</h3>
+<span class="px-3 py-1 bg-error text-on-error rounded-full text-label-lg font-bold uppercase">Critical Delay</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Vendor breach reported. Urgent reallocation of funds required for spillway repair.</p>
+</div>
+<div class="flex items-center gap-2 lg:border-l lg:border-outline-variant lg:pl-6 w-full lg:w-auto mt-4 lg:mt-0">
+<button class="flex-grow lg:flex-none p-3 rounded-xl bg-surface-container-highest hover:bg-primary-container transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined">edit</span>
+</button>
+<button class="flex-grow lg:flex-none p-3 rounded-xl bg-surface-container-highest hover:bg-error-container transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-xl bg-surface-container dark:bg-surface-container-low shadow-md">
+<div class="flex justify-around items-center w-full h-touch-target-min pb-2">
+<!-- Dashboard -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-5 py-1 hover:bg-surface-container-highest dark:hover:bg-surface-container-high transition-transform duration-150 scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-lg text-label-lg">Dashboard</span>
+</a>
+<!-- Projects (ACTIVE) -->
+<a class="flex flex-col items-center justify-center bg-secondary-container dark:bg-on-secondary-fixed-variant text-on-secondary-container dark:text-secondary-fixed rounded-full px-5 py-1 transition-transform duration-150 scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="account_tree">account_tree</span>
+<span class="font-label-lg text-label-lg">Projects</span>
+</a>
+<!-- Issues -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-5 py-1 hover:bg-surface-container-highest dark:hover:bg-surface-container-high transition-transform duration-150 scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="report_problem">report_problem</span>
+<span class="font-label-lg text-label-lg">Issues</span>
+</a>
+<!-- Settings -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-5 py-1 hover:bg-surface-container-highest dark:hover:bg-surface-container-high transition-transform duration-150 scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-lg text-label-lg">Settings</span>
+</a>
+</div>
+</nav>
+<!-- FAB -->
+<button class="fixed right-6 bottom-24 bg-primary text-on-primary w-14 h-14 rounded-2xl shadow-lg flex items-center justify-center hover:scale-105 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[32px]">post_add</span>
+</button>
+</body></html>

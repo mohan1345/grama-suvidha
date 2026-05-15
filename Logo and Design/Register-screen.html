@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Register - Grama-Suvidha</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#ebe7ec",
+                        "inverse-on-surface": "#f4eff5",
+                        "secondary-container": "#a0f399",
+                        "primary-container": "#0056d2",
+                        "on-surface": "#1c1b1f",
+                        "on-secondary": "#ffffff",
+                        "background": "#fdf8fd",
+                        "surface-container-highest": "#e5e1e7",
+                        "surface-container-low": "#f7f2f8",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#0056d2",
+                        "tertiary-fixed-dim": "#ffb598",
+                        "outline-variant": "#c3c6d6",
+                        "on-secondary-fixed-variant": "#005312",
+                        "tertiary-fixed": "#ffdbce",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed": "#001847",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed": "#002204",
+                        "on-background": "#1c1b1f",
+                        "inverse-primary": "#b2c5ff",
+                        "surface-dim": "#ddd9de",
+                        "surface": "#fdf8fd",
+                        "on-surface-variant": "#424654",
+                        "primary": "#0040a1",
+                        "on-secondary-container": "#217128",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#a3f69c",
+                        "tertiary": "#70371e",
+                        "inverse-surface": "#313034",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#ccd8ff",
+                        "secondary-fixed-dim": "#88d982",
+                        "on-tertiary-fixed-variant": "#70371e",
+                        "surface-variant": "#e5e1e7",
+                        "outline": "#737785",
+                        "on-primary-fixed-variant": "#0040a1",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#f1ecf2",
+                        "on-tertiary-container": "#ffcfbc",
+                        "secondary": "#1b6d24",
+                        "surface-bright": "#fdf8fd",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#8d4e33",
+                        "primary-fixed-dim": "#b2c5ff",
+                        "primary-fixed": "#dae2ff",
+                        "on-tertiary-fixed": "#370e00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "touch-target-min": "48px",
+                        "margin-mobile": "24px",
+                        "base": "8px",
+                        "stack-md": "24px",
+                        "gutter": "16px",
+                        "stack-lg": "40px",
+                        "stack-sm": "12px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Public Sans"],
+                        "title-lg": ["Public Sans"],
+                        "body-lg": ["Public Sans"],
+                        "headline-lg": ["Public Sans"],
+                        "display-lg": ["Public Sans"],
+                        "body-md": ["Public Sans"],
+                        "label-lg": ["Public Sans"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                        "title-lg": ["22px", {"lineHeight": "28px", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "26px", "letterSpacing": "0.5px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "display-lg": ["57px", {"lineHeight": "64px", "letterSpacing": "-0.25px", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0.25px", "fontWeight": "400"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+            background-color: #fdf8fd;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .role-toggle-active {
+            background-color: #a0f399; /* secondary-container */
+            color: #005312; /* on-secondary-fixed-variant */
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-surface">
+<!-- Top App Bar (Simplified for Transactional Flow) -->
+<header class="fixed top-0 w-full z-50 bg-surface border-b border-outline-variant flex items-center justify-between px-margin-mobile h-16">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="account_balance">account_balance</span>
+<h1 class="font-headline-md text-headline-md font-bold text-primary">Gram Vikas</h1>
+</div>
+<button class="flex items-center justify-center w-touch-target-min h-touch-target-min hover:bg-surface-container-high rounded-full transition-colors duration-200">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="close">close</span>
+</button>
+</header>
+<main class="pt-24 pb-stack-lg px-margin-mobile flex flex-col items-center">
+<!-- Hero Section / Brand Identity -->
+<div class="w-full max-w-md mb-stack-md text-center">
+<div class="rounded-xl overflow-hidden mb-6 h-48 w-full shadow-sm">
+<img alt="Community Center" class="w-full h-full object-cover" data-alt="A bright and welcoming community center in a rural village setting, showing clean architecture with a blend of traditional and modern styles. The lighting is warm morning sun, highlighting a sense of progress and digital stewardship. The image follows a high-contrast corporate aesthetic with vibrant greens and blues, suggesting a bridge between government services and local rural life." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBE2p9tnL-GjN13ijGfUkDN371iO6rp75F4xA4eTKX2XYbqzQPAlXJoCtDF5hcvl8mIOaDj7OcqpYW9aodZxr0h1XlMRWzRu-1zQroGySyx2GDfqO18iJo04mNPoomXMhZ3TZ9keV04OYAEJ3bmhI2VSOLlsMmFAUUSyxEiIg5bib146sQeTcIk9a_2xYMhrPMcjFF_Zc5C14fnk1yjN3tckgKFWS4PciPBWH6RBgK9AK4Rt35PhWGojJmxxTGDWTLkHFVuNFDtDbs"/>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">Create Account</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Join Grama-Suvidha to access local government services and track community projects.</p>
+</div>
+<!-- Registration Form -->
+<div class="w-full max-w-md space-y-stack-md">
+<!-- Role Selection (Segmented Button Style) -->
+<div class="flex flex-col gap-2">
+<span class="font-label-lg text-label-lg text-on-surface-variant ml-1">Select Your Role</span>
+<div class="flex p-1 bg-surface-container rounded-full border border-outline-variant">
+<button class="flex-1 py-2 rounded-full font-label-lg text-label-lg transition-all duration-200 role-toggle-active flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="person">person</span>
+                        Citizen
+                    </button>
+<button class="flex-1 py-2 rounded-full font-label-lg text-label-lg transition-all duration-200 text-on-surface-variant hover:bg-surface-container-highest flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="admin_panel_settings">admin_panel_settings</span>
+                        Admin
+                    </button>
+</div>
+</div>
+<form class="space-y-stack-md">
+<!-- Name Field -->
+<div class="relative group">
+<div class="flex items-center px-4 h-14 bg-surface-container-low border border-outline rounded-xl focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-all">
+<span class="material-symbols-outlined text-on-surface-variant mr-3" data-icon="badge">badge</span>
+<div class="flex-1 flex flex-col">
+<label class="text-[11px] font-medium text-primary tracking-wide">FULL NAME</label>
+<input class="bg-transparent border-none p-0 text-on-surface font-body-md focus:ring-0 w-full placeholder:text-outline" placeholder="Write your name here" type="text"/>
+</div>
+</div>
+</div>
+<!-- Email Field -->
+<div class="relative group">
+<div class="flex items-center px-4 h-14 bg-surface-container-low border border-outline rounded-xl focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-all">
+<span class="material-symbols-outlined text-on-surface-variant mr-3" data-icon="mail">mail</span>
+<div class="flex-1 flex flex-col">
+<label class="text-[11px] font-medium text-primary tracking-wide">EMAIL ADDRESS</label>
+<input class="bg-transparent border-none p-0 text-on-surface font-body-md focus:ring-0 w-full placeholder:text-outline" placeholder="example@gram.gov.in" type="email"/>
+</div>
+</div>
+</div>
+<!-- Password Field -->
+<div class="relative group">
+<div class="flex items-center px-4 h-14 bg-surface-container-low border border-outline rounded-xl focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-all">
+<span class="material-symbols-outlined text-on-surface-variant mr-3" data-icon="lock">lock</span>
+<div class="flex-1 flex flex-col">
+<label class="text-[11px] font-medium text-primary tracking-wide">PASSWORD</label>
+<input class="bg-transparent border-none p-0 text-on-surface font-body-md focus:ring-0 w-full placeholder:text-outline" placeholder="Create a strong password" type="password"/>
+</div>
+<button class="text-on-surface-variant" type="button">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+</button>
+</div>
+</div>
+<!-- Terms & Conditions Hint -->
+<p class="font-label-lg text-label-lg text-on-surface-variant px-1">
+                    By submitting, you agree to our <a class="text-primary underline font-bold" href="#">Terms of Service</a> and <a class="text-primary underline font-bold" href="#">Privacy Policy</a>.
+                </p>
+<!-- Submit Button -->
+<button class="w-full bg-primary text-on-primary h-touch-target-min rounded-full font-label-lg text-label-lg uppercase tracking-wider shadow-sm active:scale-95 transition-transform duration-150 flex items-center justify-center gap-2" type="submit">
+                    Submit Registration
+                    <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</form>
+<div class="pt-stack-md flex flex-col items-center gap-4">
+<div class="flex items-center gap-2 w-full">
+<hr class="flex-1 border-outline-variant"/>
+<span class="font-label-lg text-label-lg text-outline">Already have an account?</span>
+<hr class="flex-1 border-outline-variant"/>
+</div>
+<button class="w-full border border-outline text-primary h-touch-target-min rounded-full font-label-lg text-label-lg uppercase tracking-wider hover:bg-surface-container-low transition-colors duration-200">
+                    Login to Gram Vikas
+                </button>
+</div>
+</div>
+</main>
+<!-- Navigation Shell (Suppressed based on Transactional Flow logic, but providing a placeholder if needed for branding) -->
+<!-- Not rendering BottomNavBar for Registration Screen as per Relevance Check Rule -->
+</body></html>

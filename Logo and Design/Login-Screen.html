@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Grama-Suvidha Login</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-high": "#ebe7ec",
+                      "inverse-on-surface": "#f4eff5",
+                      "secondary-container": "#a0f399",
+                      "primary-container": "#0056d2",
+                      "on-surface": "#1c1b1f",
+                      "on-secondary": "#ffffff",
+                      "background": "#fdf8fd",
+                      "surface-container-highest": "#e5e1e7",
+                      "surface-container-low": "#f7f2f8",
+                      "error-container": "#ffdad6",
+                      "surface-tint": "#0056d2",
+                      "tertiary-fixed-dim": "#ffb598",
+                      "outline-variant": "#c3c6d6",
+                      "on-secondary-fixed-variant": "#005312",
+                      "tertiary-fixed": "#ffdbce",
+                      "on-error-container": "#93000a",
+                      "on-primary-fixed": "#001847",
+                      "error": "#ba1a1a",
+                      "on-secondary-fixed": "#002204",
+                      "on-background": "#1c1b1f",
+                      "inverse-primary": "#b2c5ff",
+                      "surface-dim": "#ddd9de",
+                      "surface": "#fdf8fd",
+                      "on-surface-variant": "#424654",
+                      "primary": "#0040a1",
+                      "on-secondary-container": "#217128",
+                      "on-error": "#ffffff",
+                      "secondary-fixed": "#a3f69c",
+                      "tertiary": "#70371e",
+                      "inverse-surface": "#313034",
+                      "on-primary": "#ffffff",
+                      "on-primary-container": "#ccd8ff",
+                      "secondary-fixed-dim": "#88d982",
+                      "on-tertiary-fixed-variant": "#70371e",
+                      "surface-variant": "#e5e1e7",
+                      "outline": "#737785",
+                      "on-primary-fixed-variant": "#0040a1",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container": "#f1ecf2",
+                      "on-tertiary-container": "#ffcfbc",
+                      "secondary": "#1b6d24",
+                      "surface-bright": "#fdf8fd",
+                      "on-tertiary": "#ffffff",
+                      "tertiary-container": "#8d4e33",
+                      "primary-fixed-dim": "#b2c5ff",
+                      "primary-fixed": "#dae2ff",
+                      "on-tertiary-fixed": "#370e00"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "touch-target-min": "48px",
+                      "margin-mobile": "24px",
+                      "base": "8px",
+                      "stack-md": "24px",
+                      "gutter": "16px",
+                      "stack-lg": "40px",
+                      "stack-sm": "12px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Public Sans"],
+                      "title-lg": ["Public Sans"],
+                      "body-lg": ["Public Sans"],
+                      "headline-lg": ["Public Sans"],
+                      "display-lg": ["Public Sans"],
+                      "body-md": ["Public Sans"],
+                      "label-lg": ["Public Sans"]
+              },
+              "fontSize": {
+                      "headline-md": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                      "title-lg": ["22px", {"lineHeight": "28px", "fontWeight": "500"}],
+                      "body-lg": ["18px", {"lineHeight": "26px", "letterSpacing": "0.5px", "fontWeight": "400"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "display-lg": ["57px", {"lineHeight": "64px", "letterSpacing": "-0.25px", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0.25px", "fontWeight": "400"}],
+                      "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Public Sans', sans-serif;
+            background-color: #fdf8fd;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col">
+<!-- Focused Layout: Navigation shells suppressed for Transactional journey -->
+<main class="flex-grow flex items-center justify-center px-margin-mobile py-stack-lg">
+<!-- Login Card -->
+<div class="w-full max-w-[440px] bg-surface rounded-[24px] border border-outline-variant p-stack-md sm:p-stack-lg shadow-sm">
+<!-- Branding/Header Section -->
+<div class="flex flex-col items-center mb-stack-lg">
+<div class="w-16 h-16 bg-primary-container flex items-center justify-center rounded-xl mb-stack-sm">
+<span class="material-symbols-outlined text-[40px] text-on-primary-container" data-icon="account_balance">account_balance</span>
+</div>
+<h1 class="font-headline-md text-headline-md text-primary text-center">Grama-Suvidha</h1>
+<p class="font-body-md text-body-md text-on-surface-variant text-center mt-2">Connecting communities through digital stewardship</p>
+</div>
+<form class="space-y-stack-md">
+<!-- MD3 Filled Text Field: Email -->
+<div class="relative group">
+<div class="bg-surface-container-highest rounded-t-lg border-b-2 border-outline focus-within:border-primary transition-all duration-200">
+<label class="block pt-2 px-4 font-label-lg text-label-lg text-primary" for="email">Email Address</label>
+<div class="flex items-center px-4 pb-2">
+<span class="material-symbols-outlined text-on-surface-variant mr-3" data-icon="mail">mail</span>
+<input class="w-full bg-transparent border-none focus:ring-0 p-0 font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant/50 h-touch-target-min" id="email" placeholder="Write your email here" type="email"/>
+</div>
+</div>
+</div>
+<!-- MD3 Filled Text Field: Password -->
+<div class="relative group">
+<div class="bg-surface-container-highest rounded-t-lg border-b-2 border-outline focus-within:border-primary transition-all duration-200">
+<label class="block pt-2 px-4 font-label-lg text-label-lg text-primary" for="password">Password</label>
+<div class="flex items-center px-4 pb-2">
+<span class="material-symbols-outlined text-on-surface-variant mr-3" data-icon="lock">lock</span>
+<input class="w-full bg-transparent border-none focus:ring-0 p-0 font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant/50 h-touch-target-min" id="password" placeholder="Enter your password" type="password"/>
+<button class="ml-2 text-on-surface-variant" type="button">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Action Links -->
+<div class="flex justify-end">
+<a class="font-label-lg text-label-lg text-primary hover:underline" href="#">Forgot Password?</a>
+</div>
+<!-- Primary Action Button: Login -->
+<div class="pt-stack-sm">
+<button class="w-full h-touch-target-min bg-primary text-on-primary rounded-full font-label-lg text-label-lg flex items-center justify-center gap-2 hover:bg-on-primary-fixed-variant transition-colors shadow-sm active:scale-95 duration-150" type="submit">
+<span class="material-symbols-outlined" data-icon="login">login</span>
+                        LOGIN
+                    </button>
+</div>
+<!-- Divider -->
+<div class="flex items-center gap-4 py-2">
+<div class="flex-grow h-[1px] bg-outline-variant"></div>
+<span class="font-label-lg text-label-lg text-on-surface-variant">OR</span>
+<div class="flex-grow h-[1px] bg-outline-variant"></div>
+</div>
+<!-- Secondary Action Button: Register -->
+<div>
+<button class="w-full h-touch-target-min bg-secondary-container text-on-secondary-container border border-outline-variant rounded-full font-label-lg text-label-lg flex items-center justify-center gap-2 hover:bg-secondary-fixed transition-colors active:scale-95 duration-150" type="button">
+<span class="material-symbols-outlined" data-icon="person_add">person_add</span>
+                        REGISTER
+                    </button>
+</div>
+</form>
+<!-- Bottom Disclaimer/Incentive -->
+<div class="mt-stack-lg p-stack-sm bg-surface-container-low rounded-xl flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="verified_user">verified_user</span>
+<p class="font-label-lg text-label-lg text-on-surface-variant">
+                    Your data is secure and managed by the Gram Vikas digital stewardship framework.
+                </p>
+</div>
+</div>
+</main>
+<!-- Footer Meta -->
+<footer class="p-margin-mobile text-center">
+<p class="font-label-lg text-label-lg text-on-surface-variant">© 2024 Gram Vikas. Empowering Rural Digitality.</p>
+</footer>
+<!-- Decorative Illustration Background Element -->
+<div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none opacity-40">
+<div class="absolute -top-[10%] -left-[10%] w-[50%] h-[50%] bg-secondary-container/20 rounded-full blur-[100px]"></div>
+<div class="absolute -bottom-[10%] -right-[10%] w-[50%] h-[50%] bg-primary-container/10 rounded-full blur-[100px]"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<img alt="Rural landscape pattern" class="w-full h-full object-cover mix-blend-overlay grayscale" data-alt="A wide angle landscape of a vibrant green rural Indian countryside featuring rolling hills and agricultural fields under a soft morning sun. The lighting is ethereal and high-key, creating a clean light-mode aesthetic that resonates with a modern corporate identity. Subtle textures of the earth and crops are visible, rendered in a minimalist style that emphasizes growth and digital progress in a serene, community-focused environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuArX0Ft9XwTYADV_ZdNv_jXv_YxSXqI5aDvZlh2CcUcAahsskzwDHaeDpBpKQYNsfxUEOiA2tjvR-cPJ1l0YHsr9WLuWk1NlPTJ0jpPFzW-A9I1DmI4M1F7fAGqZvU-qQlg2tc_8uGMiWWUSnfXZ4pRKsB1T-zTehUQA86U-AxW-9vBdWgpPQze4ZuSG9v2UjGbUk3xMiYRdVl5PKS-LHtfpU1lc6uC9BGxXxfUoB9SAp4YP0iFX18UzeEB7DxZXdJQkfASPEzuU6g"/>
+</div>
+</div>
+</body></html>
