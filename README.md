@@ -48,3 +48,5 @@ Grama Suvidha is a comprehensive Android application designed to bridge the gap 
 
 ---
 Developed to empower rural communities through digital transparency.
+
+- Commit 1: add brief update note for exam submission
