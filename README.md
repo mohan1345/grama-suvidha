@@ -56,3 +56,5 @@ Developed to empower rural communities through digital transparency.
 - Commit 3: add development milestone note
 
 - Commit 4: add review readiness note
+
+- Commit 5: add final exam submission note
